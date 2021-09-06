@@ -1,0 +1,39 @@
+<frontpage-sidenav></frontpage-sidenav>
+<section layout="row main_content" flex>
+    <md-content class="main_box" style="background: white" flex layout-padding>
+        <div id="main" style="padding: 0px">
+            <div class="back_login">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+                        <div class="login">
+                            <form name="loginForm" role="form" novalidate ng-submit="login()">
+                                <h1 class="login-title" translate>LOGIN.TITLE</h1>
+                                <hr class="custom-hr">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                    <input required name="user" ng-model="credentials.username" type="text" class="form-control" placeholder="{{'LOGIN.USER' | translate}}">
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                    <input required name="password" ng-model="credentials.password" type="password" class="form-control" placeholder="{{'LOGIN.PASSWORD' | translate}}">
+                                </div>
+                                <div ng-messages="errors">
+                                    <div class="alert alert-danger" ng-message="wrong"><i class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></i> <span translate>LOGIN.ERRORS.WRONG</span></div>
+                                    <div class="alert alert-danger" ng-message="empty"><i class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></i> <span translate>LOGIN.ERRORS.EMPTY</span></div>
+                                </div>
+                                <div class="row text-center" style="margin-top: 15px;">
+                                    <div class="col-xs-12">
+                                        <button class="btn custom-btn-login" type="submit" ng-class="{'disabled': loading}">
+                                        	<span translate>LOGIN.COMUNITARIA_LOGIN</span>
+										</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </md-content>
+</section>
+<frontpage-header></frontpage-header>

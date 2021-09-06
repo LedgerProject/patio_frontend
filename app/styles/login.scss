@@ -1,0 +1,250 @@
+@import "shared.scss";
+$MAIN_BACKGROUND: #ebf5f8;
+$MAIN_BLUE: #063b48;
+$MAIN_BLUE_ELECTRIC: #3c23d3;
+$MAIN_BLUE_ELECTRIC_TRANSPARENT: #7567df;
+$MAIN_RED: #ee3c54;
+.back_login {
+    width: 90%;
+    margin: 0px auto;
+}
+
+@media screen and (max-width: 768px) {
+    .back_login {
+        width: 95%;
+    }
+}
+
+body {
+    height: inherit !important;
+}
+
+#main {
+    background-color: $MAIN_BACKGROUND !important;
+    height: calc(100% - 60px) !important;
+    min-height: calc(100%) !important;
+}
+
+.login {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background-color: $MAIN_BACKGROUND;
+    margin-top: 65px;
+    padding-bottom: 10px;
+    height: auto;
+    form {
+        max-width: 330px;
+        padding: 15px;
+        margin: 0 auto;
+        text-align: center;
+        img {
+            width: 100%;
+        }
+        .input-group {
+            margin-bottom: 10px;
+        }
+        input {
+            border: 1px solid #b8c5d5;
+        }
+    }
+}
+
+.login-logo {
+    margin-top: -10px;
+    margin-bottom: 30px;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.login-footer {
+    border: none;
+}
+
+.custom-hr {
+    margin: 0px auto !important;
+    margin-top: 0px !important;
+    width: 75% !important;
+    margin-bottom: 20px !important;
+}
+
+.btn-facebook {
+    color: darkgrey;
+    border: 1px solid darkgrey;
+    width: 85%;
+    background: white;
+    text-align: left;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    margin: 0px auto !important;
+}
+
+.btn.btn-facebook:hover {
+    background-color: #dfe3ee !important;
+    color: darkgrey !important;
+}
+
+.btn-google {
+    border: 1px solid darkgrey;
+    color: darkgrey;
+    width: 85%;
+    background: white;
+    text-align: left;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    margin: 0px auto !important;
+    margin-bottom: 10px !important;
+}
+
+.btn.btn-google:hover {
+    background-color: #dfe3ee !important;
+    color: #3b5998 !important;
+}
+
+@media screen and (max-width: 600px) {
+    .login {
+        margin-top: 80px;
+        form {
+            .input-group {
+                width: 90%;
+                margin: 0px auto 10px auto !important;
+            }
+        }
+    }
+    .login-logo {
+        width: 90% !important;
+    }
+    .btn-google {
+        margin-left: 0px;
+    }
+}
+
+.login-title {
+    color: $MAIN_BLUE_ELECTRIC;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.input-group-addon {
+    background: white;
+}
+
+.glyphicon {
+    color: $MAIN_BLUE_ELECTRIC;
+    font-size: 20px;
+}
+
+.custom-btn-login {
+    background-color: $MAIN_BLUE_ELECTRIC;
+    color: white;
+    font-size: 20px;
+    letter-spacing: .15px;
+}
+
+.magic-link-text {
+    font-size: 18px;
+    & .text-bold {
+        font-weight: bold;
+        text-decoration: underline;
+    }
+}
+
+.info-container {
+    background: #e6e6e6;
+    border-radius: 5px;
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+    box-shadow: 5px 5px 20px #b3b3b3;
+}
+
+.inner-container {
+    margin: 15px;
+    background: white;
+    color: $MAIN_BLUE_ELECTRIC;
+    font-size: 16px;
+    border: 1px solid $MAIN_BLUE_ELECTRIC_TRANSPARENT;
+    border-radius: 5px;
+    padding: 10px 0px;
+    width: 100%;
+    & .info-title {
+        font-size: 22px;
+    }
+    & ul {
+        text-align: left;
+        font-size: 18px;
+    }
+}
+
+.btn-register {
+    background-color: $MAIN_RED;
+}
+
+.abcRioButton.abcRioButtonBlue {
+    width: 280px !important;
+}
+
+.abcRioButtonContents {
+    font-size: 16px !important;
+}
+
+.fb_iframe_widget span {
+    width: 280px !important;
+}
+
+.fb_iframe_widget iframe {
+    width: 280px !important;
+}
+
+.remember-button {
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#input-phone {
+    width: 60%;
+}
+
+#input-email {
+    width: 60%;
+}
+
+@media screen and (max-width: 768px) {
+    #input-phone {
+        width: 100%;
+    }
+    #input-email {
+        width: 100%;
+    }
+}
+
+#rememberForm {
+    & h4 {
+        color: $MAIN_BLUE;
+    }
+    & h5 {
+        color: $MAIN_BLUE;
+    }
+    & p {
+        color: $MAIN_BLUE;
+    }
+    & md-input-container {
+        padding: 5px;
+        & label {
+            margin-left: 10px;
+            opacity: 0.6;
+        }
+    }
+}
+
+.container-fluid {
+    & h3 {
+        color: $MAIN_BLUE;
+    }
+}

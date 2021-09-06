@@ -1,0 +1,74 @@
+<div class="row">
+    <div class="col-xs-12 col-md-10">
+        <table ng-if="$mdMedia('gt-xs')" class="custom-table table-bordered table-hover" style="display: table">
+            <thead>
+                <th style="width: 25%">
+                    <a ng-click="sortType = 'title'; sortReverse = !sortReverse">
+                        <span translate>SCB.INVOICE.DATE</span>
+                        <span ng-show="sortType == 'title' && !sortReverse" class="fa fa-caret-down"></span>
+                        <span ng-show="sortType == 'title' && sortReverse" class="fa fa-caret-up"></span>
+                    </a>
+                </th>
+                <th style="width: 30%">
+                    <a ng-click="sortType = 'created'; sortReverse = !sortReverse">
+                        <span translate>SCB.INVOICE.CONCEPT</span>
+                        <span ng-show="sortType == 'created' && !sortReverse" class="fa fa-caret-down"></span>
+                        <span ng-show="sortType == 'created' && sortReverse" class="fa fa-caret-up"></span>
+                    </a>
+                </th>
+                <th style="width: 15%" class="text-center">
+                    <a ng-click="sortType = 'status'; sortReverse = !sortReverse">
+                        <span translate>SCB.INVOICE.AMOUNT</span>
+                        <span ng-show="sortType == 'status' && !sortReverse" class="fa fa-caret-down"></span>
+                        <span ng-show="sortType == 'status' && sortReverse" class="fa fa-caret-up"></span>
+                    </a>
+                </th>
+                <th style="width: 15%">
+                    <a ng-click="sortType = 'assigned_to.username'; sortReverse = !sortReverse">
+                        <span translate>SCB.INVOICE.STATUS</span>
+                        <span ng-show="sortType == 'assigned_to.username' && !sortReverse" class="fa fa-caret-down"></span>
+                        <span ng-show="sortType == 'assigned_to.username' && sortReverse" class="fa fa-caret-up"></span>
+                    </a>
+                </th>
+                <th style="width: 10%">
+                    <a ng-click="">
+                        <span>SCB.INVOICE.ACTIONS</span>
+                    </a>
+                </th>
+            </thead>
+            <tbody>
+                <tr class="link" ng-repeat="invoice in invoices | orderBy:sortType:sortReverse | filter:searchWord" ng-class="{ border : !$last}" id="invoice{{invoice.id}}" style="cursor: pointer">
+                    <td style="font-size: 14px">{{(invoice.date | date:'medium') || 'Pendiente'}}</td>
+                    <td style="font-size: 14px">{{invoice.concept}}</td>
+                    <td style="font-size: 16px" class="text-capitalize text-center">{{ invoice.total }}€</td>
+                    <td style="font-size: 16px" class="text-center" ng-class="{'color-green': invoice.paid,'color-red': !invoice.paid }">
+                        <span ng-if="invoice.paid" translate>SCB.INVOICE.PAID<i class="fa fa-check color-green"></i></span>
+                        <span ng-if="!invoice.paid" translate>SCB.INVOICE.PENDING<i class="fa fa-times color-red"></i></span>
+                    </td>
+                    <td style="font-size: 16px" class="text-center">
+                        <span ng-if="invoice.paid">---</span>
+                        <span ng-if="!invoice.paid"><button ng-click="paidInvoice($event, invoice)" class="btn btn-success" translate>SCB.INVOICE.PAY_NOW</button></span>
+                    </td>
+                </tr>
+                <tr ng-if="invoices.length == 0">
+                    <td colspan="5" class="text-center" translate>SCB.INVOICE.NO_INVOICES</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="row" ng-if="$mdMedia('xs')">
+            <div class="col-sm-6 col-xs-12" ng-repeat="invoice in invoices | orderBy:sortType:sortReverse" id="invoice{{invoice.id}}" style="cursor: pointer">
+                <div class="invoice-small-container" ng-class="{ 'background-green' : invoice.paid, 'background-red' : !invoice.paid }">
+                    <b><u style="font-size: 16px">{{ invoice.date | date:'medium' }}</u></b>
+                    <button ng-if="!invoice.paid" ng-click="paidInvoice($event, invoice)" class="btn btn-success btn-circle-pay" translate>SCB.INVOICE.PAY_NOW</button>
+                    <br><br>
+                    <span class="">{{ invoice.concept}}</span><br><br>
+                    <span class="text-center" style="position:absolute; bottom: 15px; left: 15%; font-size: 20px">{{ invoice.total }}€</span>
+                    <span ng-if="invoice.paid" class="" style="position:absolute; bottom: 15px; left: 70%" translate>SCB.INVOICE.PAID</span>
+                    <span ng-if="invoice.paid" class="fa fa-check" style="position:absolute; bottom: 35px; left: 70%; font-size: 24px; color: green"></span>
+                    <span ng-if="!invoice.paid" class="" style="position:absolute; bottom: 15px; left: 70%" translate>SCB.INVOICE.PENDING</span>
+                    <span ng-if="!invoice.paid" class="fa fa-times" style="position:absolute; bottom: 35px; left: 75%; font-size: 24px; color: red"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,178 @@
+{
+    "SIDENAV": {
+        "TITLES": {
+            "SCB": "PATIO"
+        }
+    },
+    "LOGIN": {
+        "WAIT": "Espere por favor...",
+        "USER": "Usuario",
+        "PASSWORD": "Contraseña",
+        "TITLE": "Iniciar sesión",
+        "ERRORS": {
+            "WRONG": "El usuario o la contraseña son incorrectos.",
+            "EMPTY": "Por favor complete el usuario y la contraseña."
+        },
+        "COMUNITARIA_LOGIN": "Iniciar sesión",
+        "REMEMBER_ACCESS_DATA": "¿Ovidaste tu contraseña?",
+        "OR_LOGIN": "o",
+        "COMUNITARIA_REGISTER": "Obtener mi presupuesto de administración",
+        "REMEMBER_POPUP_EMAIL_PLACEHOLDER": "ejemplo@email.com",
+        "REMEMBER_POPUP_PHONE_PLACEHOLDER": "Teléfono",
+        "REMEMBER_POPUP_TITLE": "Recuperación de datos de acceso",
+        "REMEMBER_POPUP_EMAIL": "Introduzca su correo electrónico",
+        "EMAIL_INPUT_ERROR": "Debe introducir un email válido",
+        "REMEMBER_POPUP_PHONE": "Introduzca su teléfono",
+        "PHONE_INPUT_ERROR": "Debe introducir un teléfono válido",
+        "CHANGE_TO_PHONE_INPUT": "Si lo prefiere, puede introducir su teléfono y le enviaremos un SMS con sus datos de acceso",
+        "CHANGE_TO_EMAIL_INPUT": "Si lo prefiere, puede introducir su email y le enviaremos un correo con sus datos de acceso",
+        "INSERT_PHONE": "Introducir teléfono",
+        "INSERT_EMAIL": "Introducir email",
+        "INPUT_ERROR": "Debe rellenar al menos uno de los 2 datos",
+        "REMEMBER_CANCEL_BUTTON": "Cancelar",
+        "REMEMBER_SAVE_BUTTON": "Enviar",
+        "OPTIONS": {
+            "SIGNUP_TEXT1": "Date de ",
+            "SIGNUP_TEXT2": "alta gratis ",
+            "SIGNUP_TEXT3": "y:",
+            "KNOW_EXPENSES": "Conoce en qué se gasta tu cuota mensual",
+            "VOTING": "Vota online en la junta de propietarios",
+            "REPAIRS": "Sigue el estado de las reparaciones",
+            "ACCOUNTS": "Sigue el estado de las cuentas",
+            "SAVING": "Ahorra hasta un 40% en gastos comunes"
+        },
+        "LOGIN": "Acceder",
+        "LOGIN_ERROR": "Error al iniciar sesión",
+        "FBGOOGLELOGIN_ERROR": "No se ha podido iniciar sesión. Debe acceder a su cuenta y desde ahí enlazarla con su cuenta de Google o Facebook",
+        "GOOGLE_SIGNIN_TEXT": "Iniciar sesión con Google",
+        "REMEMBER_SUCCESS_TITLE": "Petición enviada con éxito",
+        "REMEMBER_SUCCESS_BODY": "En unos momentos le enviaremos un email o un SMS con sus datos de acceso",
+        "REMEMBER_FAIL_TITLE": "Ocurrió un error al enviar su solicitud. Causa: "
+    },
+    "MAIN": {
+        "HOME": "Inicio",
+        "LOGOUT": "Salir",
+        "SUPERVECINA_TEXT": "¿Puedo ayudarte?",
+        "PROFILE": "Perfil de usuario",
+        "USER_MANAGEMENT": "Gestión de usuarios",
+        "CHANGE_COMMUNITY": "Cambiar comunidad",
+        "ACTIVATE_COMMUNITY": "Activar comunidad",
+        "COMMUNITY": "Mi comunidad",
+        "ACCOUNTS": "Cuentas",
+        "REPAIRS": "Reparaciones",
+        "MEETINGS": "Juntas",
+        "ADD_USER": "Añadir usuario",
+        "ACCOUNT_SETTINGS": "Preferencias",
+        "PROFILE_EDIT": "Editar perfil",
+        "WELCOME": "Bienvenido",
+        "TITLE": "Título"
+    },
+    "FRONTPAGE": {
+        "PAGE_TITLE": ""
+    },
+    "SCB": {
+        "INDEX": {
+            "PHOTOVOLTAIC": "Autoconsumo fotovoltaico",
+            "ELEVATOR": "Monitorización del ascensor",
+            "ENERGY": "Monitorización de energía",
+            "WATER": "Monitorización de agua",
+            "WASTEWATER": "Monitorización de aguas residuales",
+            "POL": "Prueba de localización",
+            "SURVEILLANCE": "Servicio de vigilancia",
+            "ACCESS_CONTROL": "Control de accesos"
+        },
+        "INVOICE": {
+            "POPUP": {
+                "TITLE": "Pagar factura",
+                "PAID": "Puedes pagar esta factura escaneando el código QR con la aplicación de BlueWallet. La puedes descargar",
+                "COPY_TEXT": "O puede copiar el texto en el siguiente botón y pegarlo en la app:",
+                "COPY": "Copy",
+                "CLOSE": "Cerrar",
+                "HERE": " aquí"
+            },
+            "DATE": "Fecha de la factura",
+            "CONCEPT": "Concepto",
+            "AMOUNT": "Importe",
+            "STATUS": "Estado",
+            "PAY_NOW": "Pagar",
+            "NO_INVOICES": "No hay ninguna factura",
+            "PAID": "Pagada",
+            "PENDING": "Pendiente"
+        },
+        "LIVE": {
+            "POPUP": {
+                "TITLE": "Detalles del consumo",
+                "DATE": "Fecha de la medición",
+                "AMOUNT": "Cantidad medida",
+                "PRICE": "Precio",
+                "VERIFY": "Puede verificar la veracidad de las mediciones en este",
+                "LINK": " enlace"
+            },
+            "HOA_CONSUMPTION_TITLE": "Consumo de la comunidad",
+            "STATUS": "Estado: ",
+            "AGGREGATE_CONSUMPTION": "Consumo total: ",
+            "SINCE_LAST_INVOICE": "(desde la última factura)",
+            "DETAILS": "Detalles del consumo:",
+            "DATE": "Fecha",
+            "AMOUNT": "Cantidad",
+            "PRICE": "Precio",
+            "NO_MEASURES": "No hay ninguna medición",
+            "GENERATE_INVOICE": "Pagar consumo acumulado",
+            "EV_CONSUMPTION_TITLE": "Generación fotovoltaica",
+            "COMPARISSON": "Comparativa de consumos",
+            "TITLE_LIVE": "Consumo en tiempo real",
+            "TITLE_INVOICES": "Facturas"
+        }
+    },
+    "MEETINGS": {
+        "TITLE": "",
+        "STATUS": {
+            "TITLE": ""
+        },
+        "PREVIOUS": {
+            "TITLE": ""
+        }
+    },
+    "SELECT_DATE": {
+        "LAST_7_DAYS": "",
+        "LAST_30_DAYS": "",
+        "THIS_MONTH": "",
+        "LAST_MONTH": "",
+        "CUSTOM_RANGE": ""
+    },
+    "DEMOLOADING": {
+        "REDIRECT": "Cargando la DEMO de Comunitaria"
+    },
+    "COMMON": {
+        "ACTIVATE": "Activar",
+        "DELETE": "Eliminar",
+        "OPEN": "Abierta",
+        "ACTIVATED": "Activada",
+        "LANGUAGE": "Idioma:",
+        "SPANISH": "Castellano",
+        "ENGLISH": "Inglés",
+        "TURKISH": "Turco",
+        "YES": "Si",
+        "NO": "No",
+        "CLOSED": "Cerrada",
+        "DEACTIVATE": "Desactivar",
+        "LOGOUT": "Salir",
+        "LOGOUT_MESSAGE": "¿Estás seguro de cerrar sesión?",
+        "INACTIVE_COMMUNITY": "Esta comunidad todavía no está activada",
+        "INACTIVE_COMMUNITY_HOME_TEXT": "Para activarla, es necesario que nos remita un presupuesto de su comunidad que acredite que es usted el administrador de la misma. Puede adjuntar dicho fichero desde el menú de la parte superior derecha, en la opción 'Activar comunidad', o bien enviándola por correo electrónico a activación@comunitaria.com."
+    },
+    "HOME": {
+        "MESSAGE_BOARD": "Tablón de anuncios",
+        "TITLE": "Bienvenido",
+        "ACCOUNTS": "Cuentas",
+        "REPAIRS": "Reparaciones",
+        "MEETINGS": "Juntas",
+        "BOARD_TEXT1": "El vencimiento de la cuota está próximo",
+        "BOARD_TEXT2": "El arreglo fue realizado"
+    },
+    "TOOLTIP": {
+        "PROFILE": "Ver Perfil",
+        "SETTINGS": "Configuración",
+        "LOGOUT": "Salir"
+    }
+}

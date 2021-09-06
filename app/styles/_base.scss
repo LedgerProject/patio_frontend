@@ -1,0 +1,30 @@
+// @import "fonts.scss";
+
+$MAIN_BLUE: #003a49;
+$MAIN_RED: #ee3c54;
+$brand-danger: #ee3c54;
+$brand-gray: #d8dfe8;
+$brand-primary: #003a49;
+$color-grey-arrow: rgba(204, 204, 204, 0.2);
+$color-red-error: rgb(185, 74, 72);
+$font-sans-bold-italic: 'bariol_boldbold_italic', Helvetica, Arial, sans-serif;
+$font-sans-bold: 'Bariol_bold', Helvetica, Arial, sans-serif;
+$font-sans-bold: 'bariol_boldbold', Helvetica, Arial, sans-serif;
+$font-sans-italic: 'bariolregular_italic', Helvetica, Arial, sans-serif;
+$font-family-sans-serif: "bariolregular", Helvetica, Arial, sans-serif;
+$font-family-serif: Georgia, "Times New Roman", Times, serif;
+$input-color-placeholder: #999;
+$width-default: 220px; // 3 960px-grid columns
+$zindex-select-dropdown: 1060;
+
+@mixin boxshadow ($string) {
+	-webkit-box-shadow: $string;
+	-moz-box-shadow: $string;
+	box-shadow: $string;
+}
+@mixin transition ($transition) {
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+	-ms-transition: $transition;
+	-o-transition: $transition;
+}

@@ -1,0 +1,178 @@
+{
+    "SIDENAV": {
+        "TITLES": {
+            "SCB": "PATIO"
+        }
+    },
+    "LOGIN": {
+        "WAIT": "Wait please...",
+        "USER": "User",
+        "PASSWORD": "Password",
+        "TITLE": "Login",
+        "ERRORS": {
+            "WRONG": "User or password are wrong",
+            "EMPTY": "Please, fill username and password"
+        },
+        "COMUNITARIA_LOGIN": "Login with Comunitaria",
+        "REMEMBER_ACCESS_DATA": "Remember access data",
+        "OR_LOGIN": "Or login with",
+        "COMUNITARIA_REGISTER": "Get my administration budget",
+        "REMEMBER_POPUP_EMAIL_PLACEHOLDER": "example@email.com",
+        "REMEMBER_POPUP_PHONE_PLACEHOLDER": "Phone number",
+        "REMEMBER_POPUP_TITLE": "Recover your access data",
+        "REMEMBER_POPUP_EMAIL": "Type your email address",
+        "EMAIL_INPUT_ERROR": "You must type a valid email",
+        "REMEMBER_POPUP_PHONE": "Type your phone number",
+        "PHONE_INPUT_ERROR": "You must type a valid phone number",
+        "CHANGE_TO_PHONE_INPUT": "If you prefer, you can enter your phone and we will send you an SMS with your access information",
+        "CHANGE_TO_EMAIL_INPUT": "If you prefer, you can enter your email address and we will send you an email with your access information",
+        "INSERT_PHONE": "Insert phone",
+        "INSERT_EMAIL": "Insert email",
+        "INPUT_ERROR": "You must fill in at least one of the 2 fields",
+        "REMEMBER_CANCEL_BUTTON": "Cancel",
+        "REMEMBER_SAVE_BUTTON": "Send",
+        "OPTIONS": {
+            "SIGNUP_TEXT1": "",
+            "SIGNUP_TEXT2": "Sign up",
+            "SIGNUP_TEXT3": " and: ",
+            "KNOW_EXPENSES": "Know how your monthly fee is spent",
+            "VOTING": "Vote online at the owners' meeting",
+            "REPAIRS": "Follow the state of tasks",
+            "ACCOUNTS": "Follow the status of the accounts",
+            "SAVING": "Save up to 40% on your home"
+        },
+        "LOGIN": "Login",
+        "LOGIN_ERROR": "Error logging in",
+        "FBGOOGLELOGIN_ERROR": "Unable to log in You must access your account and from there link it to your Google or Facebook account",
+        "GOOGLE_SIGNIN_TEXT": "Login with Google",
+        "REMEMBER_SUCCESS_TITLE": "Request sent successfully.",
+        "REMEMBER_SUCCESS_BODY": "In a few moments we will send you a message by SMS or email with your access data",
+        "REMEMBER_FAIL_TITLE": "There was an error sending your request. Cause:"
+    },
+    "MAIN": {
+        "HOME": "Home",
+        "LOGOUT": "Logut",
+        "SUPERVECINA_TEXT": "Cain i help you?",
+        "PROFILE": "User profile",
+        "USER_MANAGEMENT": "User management",
+        "CHANGE_COMMUNITY": "Change community",
+        "ACTIVATE_COMMUNITY": "Activate community",
+        "COMMUNITY": "My community",
+        "ACCOUNTS": "Accounts",
+        "REPAIRS": "Tasks",
+        "MEETINGS": "Meetings",
+        "ADD_USER": "Add user",
+        "ACCOUNT_SETTINGS": "Settings",
+        "PROFILE_EDIT": "Edit profile",
+        "WELCOME": "Wellcome",
+        "TITLE": "Title"
+    },
+    "FRONTPAGE": {
+        "PAGE_TITLE": ""
+    },
+    "SCB": {
+        "INDEX": {
+            "PHOTOVOLTAIC": "Photovoltaic self-consumption",
+            "ELEVATOR": "Lift/Elevator Monitoring",
+            "ENERGY": "Energy monitoring",
+            "WATER": "Water monitoring",
+            "WASTEWATER": "Wastewater monitoring",
+            "POL": "Proof of Location",
+            "SURVEILLANCE": "Services Surveillance",
+            "ACCESS_CONTROL": "Access control"
+        },
+        "INVOICE": {
+            "POPUP": {
+                "TITLE": "Pay invoice",
+                "PAID": "You can pay your invoice by scanning this QR code with the BlueWallet app. You can download it from",
+                "COPY_TEXT": "Or you can copy the following text and paste it in the app:",
+                "COPY": "Copy",
+                "CLOSE": "Close",
+                "HERE": " here"
+            },
+            "DATE": "Invoice date",
+            "CONCEPT": "Concept",
+            "AMOUNT": "Amount",
+            "STATUS": "Status",
+            "PAY_NOW": "Pay",
+            "NO_INVOICES": "There are no invoices yet",
+            "PAID": "Paid",
+            "PENDING": "Pending"
+        },
+        "LIVE": {
+            "POPUP": {
+                "TITLE": "Consumption details",
+                "DATE": "Date measured",
+                "AMOUNT": "Amount measured",
+                "PRICE": "Price",
+                "VERIFY": "You can verify the truthfulness of the data measured by following this",
+                "LINK": " link"
+            },
+            "HOA_CONSUMPTION_TITLE": " HOA consumption",
+            "STATUS": "Status: ",
+            "AGGREGATE_CONSUMPTION": "Aggregated comsumption: ",
+            "SINCE_LAST_INVOICE": "(since last invoice)",
+            "DETAILS": "Consumption details:",
+            "DATE": "DATE",
+            "AMOUNT": "AMOUNT",
+            "PRICE": "PRICE",
+            "NO_MEASURES": "No measures yet",
+            "GENERATE_INVOICE": "Pay outstanding consumption",
+            "EV_CONSUMPTION_TITLE": "Photovoltaic Panels Generation",
+            "COMPARISSON": "Consumption comparisson",
+            "TITLE_LIVE": "Live consumption",
+            "TITLE_INVOICES": "Invoices"
+        }
+    },
+    "MEETINGS": {
+        "TITLE": "",
+        "STATUS": {
+            "TITLE": ""
+        },
+        "PREVIOUS": {
+            "TITLE": ""
+        }
+    },
+    "SELECT_DATE": {
+        "LAST_7_DAYS": "",
+        "LAST_30_DAYS": "",
+        "THIS_MONTH": "",
+        "LAST_MONTH": "",
+        "CUSTOM_RANGE": ""
+    },
+    "DEMOLOADING": {
+        "REDIRECT": "Loading Comunitaria DEMO"
+    },
+    "COMMON": {
+        "ACTIVATE": "Activate",
+        "DELETE": "Delete",
+        "OPEN": "Open",
+        "ACTIVATED": "Activated",
+        "LANGUAGE": "Language:",
+        "SPANISH": "Spanish",
+        "ENGLISH": "English",
+        "TURKISH": "Turkish",
+        "YES": "Yes",
+        "NO": "No",
+        "CLOSED": "Closed",
+        "DEACTIVATE": "Deactivate",
+        "LOGOUT": "Logout",
+        "LOGOUT_MESSAGE": "Are you sure you want to logout?",
+        "INACTIVE_COMMUNITY": "This community is not activated yet",
+        "INACTIVE_COMMUNITY_HOME_TEXT": "To activate it, you have to send us a budget that probes that you are the community administrator. You can attach this file in the top-right menu, in 'Active community' option, or by sending us an email to activación@comunitaria.com."
+    },
+    "HOME": {
+        "MESSAGE_BOARD": "Message board",
+        "TITLE": "Wellcome",
+        "ACCOUNTS": "Accounts",
+        "REPAIRS": "Tasks",
+        "MEETINGS": "Meetings",
+        "BOARD_TEXT1": "The due date is near",
+        "BOARD_TEXT2": "The arrangement was made"
+    },
+    "TOOLTIP": {
+        "PROFILE": "View profile",
+        "SETTINGS": "Settings",
+        "LOGOUT": "Logout"
+    }
+}

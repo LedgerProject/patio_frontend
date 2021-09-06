@@ -1,0 +1,34 @@
+<div style="margin-top: 30px; padding: 0px 40px">
+    <div layout="row" flex="100">
+        <div flex-xs="50" flex="20">
+            <label class="homepage-user-name text-capitalize">Hola, {{ user_data.username }}</label>
+            <p class="user-avatar-container">
+                <i class="glyphicon glyphicon-user"></i>
+            </p>
+        </div>
+        <div flex-xs="0" flex="60"></div>
+        <!-- <div flex-xs="50" flex="20">
+            <p class="homepage-balance-container">+ {{community_data.balance | currency}}</p>
+            <label class="homepage-balance-description">Balance de tu comunidad</label>
+        </div> -->
+    </div>
+    <div layout="row" flex="70" flex-xs="100">
+        <hr style="border-color: #7567DF; margin:0px auto; width: 70%; margin-top: 20px; margin-bottom: 20px">
+    </div>
+    <div layout="row" flex="100">
+        <div class="m_title text-center" flex-sm="100" flex-xs="100" flex="70">
+            <label class="community-name">{{ community_data.community_name }}</label>
+        </div>
+    </div>
+</div>
+<div class="jumbotron custom-j">
+    <div layout="row" layout-sm="column" layout-xs="column">
+        <div class="full_container" flex-sm="100" flex-xs="100" flex="70">
+            <div layout="row">
+                <div flex="50" go-click="^.scb.index" class="text-center custom-home-button">
+                    <img src="https://pluspng.com/img-png/brain-png-http-www-feelingprettyremarkable-com-sites-default-files-710.png" width="40px" style="margin-right: 5px;">
+                    <label class="btn_text uppercase" translate>SIDENAV.TITLES.SCB</label>
+                </div>  
+        </div>
+    </div>
+</div>

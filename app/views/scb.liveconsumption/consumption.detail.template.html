@@ -1,0 +1,39 @@
+<md-dialog style="max-width: 100%">
+    <md-toolbar style="background-color: #063b48">
+        <div class="md-toolbar-tools">
+            <h3 translate>SCB.LIVE.POPUP.TITLE</h3>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="cancel()">
+                <md-icon aria-label="Close dialog"></md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+    <md-dialog-content>
+        <div class="md-dialog-content">
+            <table class="custom-table table-bordered table-hover" style="width: auto; margin-bottom: 20px">
+                <thead>
+                    <th translate>SCB.LIVE.POPUP.DATE</th>
+                    <th translate>SCB.LIVE.POPUP.AMOUNT</th>
+                    <th translate>SCB.LIVE.POPUP.PRICE</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            {{ cons.time | date:'medium' }}
+                        </td>
+                        <td class="text-center">
+                            {{cons.energy_amount }}
+                        </td>
+                        <td class="text-center">
+                            {{ cons.price }}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="font-size: 16px"><span translate>SCB.LIVE.POPUP.VERIFY</span>
+                <a target="_blank" href="https://mam-explorer.firebaseapp.com/?provider=https%3A%2F%2Fnodes.devnet.iota.org&mode=public&root={{cons.mam_address}}">
+                    <span translate>SCB.LIVE.POPUP.LINK</span>
+                </a>
+            </p>
+    </md-dialog-content>
+</md-dialog>

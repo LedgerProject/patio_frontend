@@ -1,0 +1,123 @@
+<!doctype html>
+<html class="no-js" lang="es" ng-app="comunitariaApp" ng-cloak>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta charset="UTF-8">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="images/favicon/manifest.json">
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#EE3C54">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- <link rel="preload" as="style" onload="this.rel='stylesheet'" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.2.1/css/ol.css" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/ol-geocoder@latest/dist/ol-geocoder.min.css" rel="stylesheet">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+    <link rel="stylesheet" href="bower_components/nvd3/src/nv.d3.css" />
+    <link rel="stylesheet" href="bower_components/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="preload" as="style" onload="this.rel='stylesheet'" type="text/css" href="styles/main.css">
+    <link rel="preload" as="style" onload="this.rel='stylesheet'" type="text/css" href="styles/homepage.css">
+    <!-- <link rel="preload" as="style" onload="this.rel='stylesheet'" type="text/css" href="styles/_base.css"> -->
+    <link rel="preload" as="style" onload="this.rel='stylesheet'" type="text/css" href="styles/font-awesome.css">
+    <!-- endbuild -->
+
+    <title>Supervecina</title>
+</head>
+
+<body style="height: auto">
+
+    <!-- Add your site or application content here -->
+    <div class="main-container" ui-view></div>
+    <!-- build:js(.) scripts/oldieshim.js -->
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.js"></script>
+    <![endif]-->
+    <!-- endbuild -->
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-translate/angular-translate.js"></script>
+    <script src="bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
+    <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+    <script src="bower_components/angular-translate-storage-local/angular-translate-storage-local.js"></script>
+    <script src="bower_components/d3/d3.js"></script>
+    <script src="bower_components/nvd3/nv.d3.js"></script>
+    <script src="bower_components/angular-nvd3/dist/angular-nvd3.min.js"></script>
+    <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+    <script src="bower_components/angular-lodash/angular-lodash.js"></script>
+    <script src="bower_components/angular-file-upload/angular-file-upload.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
+    <script src="bower_components/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.js"></script>
+    <script src="bower_components/chart.js/dist/Chart.js"></script>
+    <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
+    <script src="bower_components/qrcode/lib/qrcode.js"></script>
+    <script src="bower_components/angular-qr/src/angular-qr.js"></script>
+    <!-- endbower -->
+    <script src="bower_components/angular-i18n/angular-locale_es-es.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/routes.js"></script>
+    <script src="scripts/services/user-roles.js"></script>
+    <script src="scripts/services/anchorsmoothscroll.js"></script>
+    <script src="scripts/services/auth-service.js"></script>
+    <script src="scripts/services/backend.js"></script>
+    <script src="scripts/services/session.js"></script>
+    <script src="scripts/services/api.js"></script>
+    <script src="scripts/services/auth-interceptor.js"></script>
+    <script src="scripts/services/auth-events.js"></script>
+    <!-- <script src="scripts/services/markerclusterer.js"></script> -->
+    <script src="scripts/filters/percentage.js"></script>
+    <script src="scripts/filters/offset.js"></script>
+    <script src="scripts/services/transactionstoseries.js"></script>
+    <script src="scripts/directives/select-date-directive.js"></script>
+    <script src="scripts/directives/google-auth.js"></script>
+    <script src="scripts/directives/ng-thumb.js"></script>
+    <script src="scripts/directives/ng-fileread.js"></script>
+    <script src="scripts/directives/translate-footer.js"></script>
+
+    <!-- LOAD VIEW CONTROLLERS -->
+    <script src="views/home/home.js"></script>
+    <script src="views/main/main.js"></script>
+    <script src="views/login/login.js"></script>
+    <script src="views/login/demo.js"></script>
+    <script src="views/loading/loading.js"></script>
+    <script src="views/logout.js"></script>
+
+    <script src="views/scb/scb.js"></script>
+    <script src="views/scb.index/scb.index.js"></script>
+    <script src="views/scb.liveconsumption/scb.liveconsumption.js"></script>
+    <script src="views/scb.invoices/scb.invoices.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>

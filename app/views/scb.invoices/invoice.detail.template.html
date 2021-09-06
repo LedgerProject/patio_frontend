@@ -1,0 +1,42 @@
+<md-dialog style="max-width: 100%">
+    <md-toolbar style="background-color: #063b48">
+        <div class="md-toolbar-tools">
+            <h3 translate>SCB.INVOICE.POPUP.TITLE</h3>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="cancel()">
+                <md-icon aria-label="Close dialog"></md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+    <md-dialog-content>
+        <div class="md-dialog-content">
+            <p style="font-size: 16px">
+                <span translate>SCB.INVOICE.POPUP.PAID</span><br>
+                <div class="row text-center">
+                    <a class="text-center" href="https://itunes.apple.com/app/bluewallet-bitcoin-wallet/id1376878040">
+                        <img width="120px" height="50px" src="https://incentrip.org/img/Download%20Page/apple.png">
+                    </a>
+                    <a class="text-center" href="https://play.google.com/store/apps/details?id=io.bluewallet.bluewallet">
+                        <img width="120px" height="40px" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png">
+                    </a>
+                </div>
+            </p>
+        </div>
+        <div id="qr" class="text-center" style="padding: 20px; margin-bottom: 10px">
+            <a href="lightning:{{ apitoshi_key }}">
+                <qr style="margin-bottom: 20px" text="apitoshi_key"></qr>
+            </a>
+        </div>
+        <div class="copy-text text-center">
+            <span translate>SCB.INVOICE.POPUP.COPY_TEXT</span>
+            <button ng-click="copyTextToClipboard(apitoshi_key)" class="btn btn-warning">
+				<i class="fa fa-copy">&nbsp;&nbsp;</i><span translate>SCB.INVOICE.POPUP.COPY</span>
+			</button>
+        </div>
+        <div class="row" style="float: right; margin-bottom: 20px; margin-right: 30px">
+            <button ng-click="closeDialog()" class="btn btn-danger">
+				<span translate>SCB.INVOICE.POPUP.CLOSE</span>
+			</button>
+        </div>
+    </md-dialog-content>
+</md-dialog>

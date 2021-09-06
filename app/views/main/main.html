@@ -1,0 +1,61 @@
+<div id="top" class="ctainer">
+    <section layout="row main_content" flex>
+        <!-- <md-sidenav style="padding-top: 80px;" class="md-sidenav-left side-menu md-whiteframe-4dp" md-component-id="left"> -->
+        <md-sidenav style="padding-top: 80px;" id="text-123" class="md-sidenav-left side-menu" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')" md-whiteframe="4">
+            <md-content layout-padding class="no-scroll-x">
+                <md-list flex>
+                    <md-list-item ui-sref=".home" ng-class="{'active':isActive('main.home')}" class="md-1-line" ng-click="toggleLeftSidenav()">
+                        <md-icon class="icon-light custom-sidenav-color">home</md-icon><span translate>MAIN.HOME</span>
+                    </md-list-item>
+                    <md-list-item ng-if="user_data.id === 21 && user_data.username === 'demo'" ui-sref="main.scb.index" ng-class="{'active': isActive('main.scb.index')}" class="md-1-line" ng-click="toggleLeftSidenav()">
+                        <img src="https://pluspng.com/img-png/brain-png-http-www-feelingprettyremarkable-com-sites-default-files-710.png" width="40px" style="margin-right: 5px;">
+                        <span class="btn_text uppercase" translate>SIDENAV.TITLES.SCB</span>
+                    </md-list-item>
+
+                </md-list>
+            </md-content>
+        </md-sidenav>
+        <div class="main_box" style="padding-top: 65px !important;" flex layout-padding>
+            <div id="main" style="background: none;" class="content" ui-view></div>
+            <!-- <translate-footer></translate-footer> -->
+        </div>
+    </section>
+    <div class="row header" style="margin: 0px">
+        <div class="col-xs-12">
+            <md-icon class="h-icon" ng-click="toggleLeftSidenav()">menu </md-icon>
+            <a href="https://www.supervecina.com">
+                <img ng-if="!activeLang('tr_TR')" class="header-logo show-cursor" src="https://storage.googleapis.com/supervecina_ui/2019/U%20azul%20SIN%20fondo@8x.png" width="200px" height="60px" alt="{{GLOBAL.TITLE | translate}}" style="padding: 8px">
+                <img ng-if="activeLang('tr_TR')" class="header-logo show-cursor" src="https://storage.googleapis.com/supervecina_ui/2019/U%20azul%20SIN%20fondo_TR%404x.png" width="200px" height="60px" alt="{{GLOBAL.TITLE | translate}}" style="padding: 8px">
+            </a>
+        </div>
+        <div class="col-xs-12">
+            <p class="header-text" translate>FRONTPAGE.PAGE_TITLE</p>
+        </div>
+
+        <div class="header_user text-left m_absolute m_white">
+            <figure class="m_inline header_avatar"><img class="main-avatar" src="{{user.avatar ? user.avatar : './images/ic_face.png' }}" class="md-avatar img-thumbnail"></figure>
+            <div class="m_inline text_user">{{user.username}}</div>
+            <div class="m_inline menu-dropdown">
+                <i ng-click="toggleMenu()" class="material-icons m_pointer" style="transform:translateY(8px);">keyboard_arrow_down</i>
+                <md-list id="navbar-menu" flex class="menu-dropdown-content">
+                    <md-list-item ng-click="toggleMenu()" ui-sref=".home">
+                        <span class="fa fa-home"></span>&nbsp&nbsp
+                        <span translate> MAIN.HOME</span>
+                    </md-list-item>
+                    <md-list-item ng-click="logout()">
+                        <span class="fa fa-power-off"></span>&nbsp&nbsp
+                        <span translate> MAIN.LOGOUT</span>
+                    </md-list-item>
+                    <hr class="custom-hr">
+                    <md-list-item style="padding: 0px">
+                        <a href="{{supervecina_url}}" class="supervecina">
+                            <img src="https://storage.googleapis.com/supervecina_ui/2019/avatares/chat.png" width="50px">
+                            <span translate>MAIN.SUPERVECINA_TEXT</span>
+                        </a>
+                    </md-list-item>
+                </md-list>
+            </div>
+        </div>
+
+    </div>
+</div>
