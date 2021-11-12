@@ -112,6 +112,7 @@
             "STATUS": "Status: ",
             "AGGREGATE_CONSUMPTION": "Aggregated comsumption: ",
             "SINCE_LAST_INVOICE": "(since last invoice)",
+            "NAME": "Consumer name",
             "DETAILS": "Consumption details:",
             "DATE": "DATE",
             "AMOUNT": "AMOUNT",
@@ -119,6 +120,8 @@
             "NO_MEASURES": "No measures yet",
             "GENERATE_INVOICE": "Pay outstanding consumption",
             "EV_CONSUMPTION_TITLE": "Photovoltaic Panels Generation",
+            "AGGREGATE_GENERATION": "Total generated: ",
+            "GENERATION_DETAILS": "Generation Details:",
             "COMPARISSON": "Consumption comparisson",
             "TITLE_LIVE": "Live consumption",
             "TITLE_INVOICES": "Invoices"
@@ -133,6 +136,24 @@
             "TITLE": ""
         }
     },
+    "COMMON": {
+        "LANGUAGE": "Language:",
+        "SPANISH": "Spanish",
+        "ENGLISH": "English",
+        "TURKISH": "Turkish",
+        "ACTIVATE": "Activate",
+        "DELETE": "Delete",
+        "OPEN": "Open",
+        "ACTIVATED": "Activated",
+        "YES": "Yes",
+        "NO": "No",
+        "CLOSED": "Closed",
+        "DEACTIVATE": "Deactivate",
+        "LOGOUT": "Logout",
+        "LOGOUT_MESSAGE": "Are you sure you want to logout?",
+        "INACTIVE_COMMUNITY": "This community is not activated yet",
+        "INACTIVE_COMMUNITY_HOME_TEXT": "To activate it, you have to send us a budget that probes that you are the community administrator. You can attach this file in the top-right menu, in 'Active community' option, or by sending us an email to activación@comunitaria.com."
+    },
     "SELECT_DATE": {
         "LAST_7_DAYS": "",
         "LAST_30_DAYS": "",
@@ -142,24 +163,6 @@
     },
     "DEMOLOADING": {
         "REDIRECT": "Loading Comunitaria DEMO"
-    },
-    "COMMON": {
-        "ACTIVATE": "Activate",
-        "DELETE": "Delete",
-        "OPEN": "Open",
-        "ACTIVATED": "Activated",
-        "LANGUAGE": "Language:",
-        "SPANISH": "Spanish",
-        "ENGLISH": "English",
-        "TURKISH": "Turkish",
-        "YES": "Yes",
-        "NO": "No",
-        "CLOSED": "Closed",
-        "DEACTIVATE": "Deactivate",
-        "LOGOUT": "Logout",
-        "LOGOUT_MESSAGE": "Are you sure you want to logout?",
-        "INACTIVE_COMMUNITY": "This community is not activated yet",
-        "INACTIVE_COMMUNITY_HOME_TEXT": "To activate it, you have to send us a budget that probes that you are the community administrator. You can attach this file in the top-right menu, in 'Active community' option, or by sending us an email to activación@comunitaria.com."
     },
     "HOME": {
         "MESSAGE_BOARD": "Message board",

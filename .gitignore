@@ -1,0 +1,12 @@
+# Eclipse IDE files
+.buildpath
+.project
+.settings
+
+bower_components/
+node_modules/
+comunitaria_app_patio_env/
+
+.DS_Store
+.sass-cache/
+.tmp/

@@ -1,0 +1,10 @@
+<footer class="footer" style="position: fixed; bottom: 0px">
+    <div class="top_line" style="border: none">
+        <!-- <span class="m_light_gray" style="margin-right: 5px;" translate>COMMON.LANGUAGE</span> -->
+        <a ng-class="{'active': activeLang('es_ES'), 'm_light_gray': !activeLang('es_ES')}" ng-click="changeLanguage('es')" translate>COMMON.SPANISH</a>
+        <span class="m_light_gray">|</span>
+        <a ng-class="{'active': activeLang('en_US'), 'm_light_gray': !activeLang('en_US')}" ng-click="changeLanguage('en')" translate>COMMON.ENGLISH</a>
+        <!-- <span class="m_light_gray">|</span>
+        <a ng-class="{'active': activeLang('tr_TR'), 'm_light_gray': !activeLang('tr_TR')}" ng-click="changeLanguage('tr')" translate>COMMON.TURKISH</a> -->
+    </div>
+</footer>

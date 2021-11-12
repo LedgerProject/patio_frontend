@@ -113,12 +113,15 @@
             "AGGREGATE_CONSUMPTION": "Consumo total: ",
             "SINCE_LAST_INVOICE": "(desde la última factura)",
             "DETAILS": "Detalles del consumo:",
+            "NAME": "Nombre consumidor",
             "DATE": "Fecha",
             "AMOUNT": "Cantidad",
             "PRICE": "Precio",
             "NO_MEASURES": "No hay ninguna medición",
             "GENERATE_INVOICE": "Pagar consumo acumulado",
             "EV_CONSUMPTION_TITLE": "Generación fotovoltaica",
+            "AGGREGATE_GENERATION": "Total Generado: ",
+            "GENERATION_DETAILS": "Detalles de la generación:",
             "COMPARISSON": "Comparativa de consumos",
             "TITLE_LIVE": "Consumo en tiempo real",
             "TITLE_INVOICES": "Facturas"
@@ -133,6 +136,24 @@
             "TITLE": ""
         }
     },
+    "COMMON": {
+        "LANGUAGE": "Idioma:",
+        "SPANISH": "Castellano",
+        "ENGLISH": "Inglés",
+        "TURKISH": "Turco",
+        "ACTIVATE": "Activar",
+        "DELETE": "Eliminar",
+        "OPEN": "Abierta",
+        "ACTIVATED": "Activada",
+        "YES": "Si",
+        "NO": "No",
+        "CLOSED": "Cerrada",
+        "DEACTIVATE": "Desactivar",
+        "LOGOUT": "Salir",
+        "LOGOUT_MESSAGE": "¿Estás seguro de cerrar sesión?",
+        "INACTIVE_COMMUNITY": "Esta comunidad todavía no está activada",
+        "INACTIVE_COMMUNITY_HOME_TEXT": "Para activarla, es necesario que nos remita un presupuesto de su comunidad que acredite que es usted el administrador de la misma. Puede adjuntar dicho fichero desde el menú de la parte superior derecha, en la opción 'Activar comunidad', o bien enviándola por correo electrónico a activación@comunitaria.com."
+    },
     "SELECT_DATE": {
         "LAST_7_DAYS": "",
         "LAST_30_DAYS": "",
@@ -142,24 +163,6 @@
     },
     "DEMOLOADING": {
         "REDIRECT": "Cargando la DEMO de Comunitaria"
-    },
-    "COMMON": {
-        "ACTIVATE": "Activar",
-        "DELETE": "Eliminar",
-        "OPEN": "Abierta",
-        "ACTIVATED": "Activada",
-        "LANGUAGE": "Idioma:",
-        "SPANISH": "Castellano",
-        "ENGLISH": "Inglés",
-        "TURKISH": "Turco",
-        "YES": "Si",
-        "NO": "No",
-        "CLOSED": "Cerrada",
-        "DEACTIVATE": "Desactivar",
-        "LOGOUT": "Salir",
-        "LOGOUT_MESSAGE": "¿Estás seguro de cerrar sesión?",
-        "INACTIVE_COMMUNITY": "Esta comunidad todavía no está activada",
-        "INACTIVE_COMMUNITY_HOME_TEXT": "Para activarla, es necesario que nos remita un presupuesto de su comunidad que acredite que es usted el administrador de la misma. Puede adjuntar dicho fichero desde el menú de la parte superior derecha, en la opción 'Activar comunidad', o bien enviándola por correo electrónico a activación@comunitaria.com."
     },
     "HOME": {
         "MESSAGE_BOARD": "Tablón de anuncios",

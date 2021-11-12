@@ -35,6 +35,11 @@ angular
         $scope.common_sortReverse = true;
 
         $scope.consumptions = [];
+        $scope.agreements = [];
+        $scope.agreements_totals = {
+			energy_amount: 0,
+			watt_price: 0
+		};
         $scope.current_user_consumption = 0;
         $scope.current_common_places_consumption = 0;
         $scope.total_user_consumption = 0;
@@ -51,11 +56,14 @@ angular
                 .get({ community: community, usercommunity: usercommunity })
                 .$promise.then(function(res) {
                     if ((res.status = 'OK')) {
-                        $scope.current_user_consumptions = $filter('filter')(res, {
-                            user: usercommunity,
-                            processed: false
-                        });
-                        $scope.common_places_consumptions = $filter('filter')(res, { user: null, processed: false });
+                        // $scope.current_user_consumptions = $filter('filter')(res, {
+                        //     user: usercommunity,
+                        //     processed: false
+                        // });
+						if (!$scope.current_user_consumptions) {
+                            $scope.current_user_consumptions = [];
+                        }
+                        $scope.common_places_consumptions = $filter('filter')(res, { user: usercommunity, processed: false });
                         calculateValues();
                     } else {
                         var error = $mdDialog.alert().title(res.error_text).ok('Ok');
@@ -63,6 +71,27 @@ angular
                     }
                 });
         };
+
+        var getGenerated = function() {
+            api.get_scb_generated
+                .get({ community: community, usercommunity: usercommunity })
+                .$promise.then(function(res) {
+                    if ((res.status = 'OK')) {
+						if (!$scope.common_places_consumptions) {
+                            $scope.common_places_consumptions = [];
+                        }
+                        $scope.current_user_consumptions = $filter('filter')(res, {
+                            community: community
+                        });
+                        // $scope.common_places_consumptions = $filter('filter')(res, { user: null, processed: false });
+                        calculateValues();
+                    } else {
+                        var error = $mdDialog.alert().title(res.error_text).ok('Ok');
+                        $mdDialog.show(error);
+                    }
+                });
+        };
+
 
         var calculateValues = function() {
             clearEnergyTotals();
@@ -129,6 +158,23 @@ angular
             $scope.total_common_places_consumption = 0;
         };
 
+		var getAgreements = function() {
+			api.get_scb_stores
+                .get({ community: community})
+                .$promise.then(function(res) {
+                    if ((res.status = 'OK')) {
+						$scope.agreements = res;
+						angular.forEach($scope.agreements, function(value, key) {
+							$scope.agreements_totals.energy_amount += parseFloat(value.energy_amount);
+							$scope.agreements_totals.watt_price += parseFloat(value.watt_price);
+						});
+                    } else {
+                        var error = $mdDialog.alert().title(res.error_text).ok('Ok');
+                        $mdDialog.show(error);
+                    }
+                });
+		}
+
         $scope.showDialog = function(ev, cons) {
             $mdDialog.show({
                 parent: angular.element(document.body),
@@ -174,9 +220,11 @@ angular
         };
 
         getConsumptions();
+		getAgreements();
 
         var onTimeout = $interval(function() {
             getConsumptions();
+			getGenerated();
         }, 1000);
 
         $scope.$on('$destroy', function() {

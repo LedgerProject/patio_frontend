@@ -1,31 +1,12 @@
 <div class="row">
     <div class="col-md-5">
-		<div class="energy_display">
-            <p class="energy_display_title" translate>SCB.LIVE.HOA_CONSUMPTION_TITLE</p>
-            <div class="energy_display_panel">
-                <div class="panel_inside">
-                    <div class="led-box">
-                        <span class="status_text"><i translate>SCB.LIVE.STATUS</i></span>
-                        <div ng-if="current_common_places_consumption > 0" class="led-green"></div>
-                        <div ng-if="current_common_places_consumption == 0" class="led-red"></div>
-                    </div>
-                    <div class="energy_display_value">
-                        <span class="">{{ current_common_places_consumption | number : 2 }} W</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="total_energy_display">
-            <span translate>SCB.LIVE.AGGREGATE_CONSUMPTION</span><span>{{ total_common_places_consumption | number : 2 }} W</span><br>
-            <small style="font-size: 14px" translate>SCB.LIVE.SINCE_LAST_INVOICE</small>
-        </div>
         <p><u translate>SCB.LIVE.DETAILS</u></p>
         <table class="custom-table table-bordered table-responsive table-hover" style="display: table">
             <thead>
                 <tr>
                     <th width="45%">
                         <a ng-click="common_sortType = 'time'; common_sortReverse = !common_sortReverse">
-                            <span translate>SCB.LIVE.DATE</span>
+                            <span translate>SCB.LIVE.NAME</span>
                             <span ng-show="common_sortType == 'time' && !common_sortReverse" class="fa fa-caret-down"></span>
                             <span ng-show="common_sortType == 'time' && common_sortReverse" class="fa fa-caret-up"></span>
                         </a>
@@ -47,22 +28,21 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-click="showDialog($event, consumption)" class="link" ng-repeat="consumption in common_places_consumptions | orderBy:common_sortType:common_sortReverse" ng-class="{ border : !$last}" id="common_consumption{{consumption.id}}" style="cursor: pointer">
-                    <td style="font-size: 14px">{{(consumption.time | date:'medium') || 'Pendiente'}}</td>
-                    <td style="font-size: 16px" class="text-center">{{consumption.energy_amount | number:2 }}W</td>
-                    <td style="font-size: 16px" class="text-capitalize text-center">{{ consumption.price | number:2 }}€</td>
+                <tr class="link" ng-repeat="agreement in agreements | orderBy:common_sortType:common_sortReverse" ng-class="{ border : !$last}" id="agreement{{agreement.id}}">
+                    <td style="font-size: 14px">{{(agreement.consumer_name) || 'Pendiente'}}</td>
+                    <td style="font-size: 16px" class="text-center">{{agreement.energy_amount | number:2 }}W</td>
+                    <td style="font-size: 16px" class="text-capitalize text-center">{{ agreement.watt_price | number:2 }}€</td>
                 </tr>
-                <tr ng-if="common_places_consumptions == 0">
+                <tr ng-if="agreements.length != 0" style="background-color: #f5f5f5;">
+					<td style="font-size: 14px"><b>TOTAL</b></td>
+					<td style="font-size: 16px" class="text-center"><b>{{ agreements_totals.energy_amount | number:2 }}W</b></td>
+					<td style="font-size: 16px" class="text-capitalize text-center"><b>{{ agreements_totals.watt_price | number:2 }}€</b></td>
+                </tr>
+                <tr ng-if="agreements.length == 0">
                     <td colspan="3" class="text-center" translate>SCB.LIVE.NO_MEASURES</td>
                 </tr>
             </tbody>
         </table>
-        <div ng-if="total_common_places_consumption > 0" class="text-center" style="margin: 15px 0px">
-            <button class="btn btn-meeting" ng-click="generateInvoice('common_places')">
-				<span><img src="/images/lightning_small.png" width="25px" height="25px"></span>
-				<span translate>SCB.LIVE.GENERATE_INVOICE</span>
-			</button>
-        </div>
         <hr ng-if="!$mdMedia('gt-sm')">
     </div>
     <div class="col-md-offset-1 col-md-5">
@@ -84,10 +64,10 @@
             </div>
         </div>
         <div class="total_energy_display">
-            <span translate>SCB.LIVE.AGGREGATE_CONSUMPTION</span><span>{{ total_user_consumption | number : 2 }} W</span><br>
+            <span translate>SCB.LIVE.AGGREGATE_GENERATION</span><span>{{ total_user_consumption | number : 2 }} W</span><br>
             <small style="font-size: 14px" translate>SCB.LIVE.SINCE_LAST_INVOICE</small>
         </div>
-        <p><u translate>SCB.LIVE.DETAILS</u></p>
+        <p><u translate>SCB.LIVE.GENERATION_DETAILS</u></p>
         <table class="custom-table table-bordered table-hover" style="display: table">
             <thead>
                 <tr>
@@ -118,7 +98,7 @@
                 <tr ng-click="showDialog($event, consumption)" class="link" ng-repeat="consumption in current_user_consumptions | orderBy:user_sortType:user_sortReverse" ng-class="{ border : !$last}" id="user_consumption{{consumption.id}}" style="cursor: pointer">
                     <td style="font-size: 14px">{{(consumption.time | date:'medium') || 'Pendiente'}}</td>
                     <td style="font-size: 16px" class="text-center">{{consumption.energy_amount | number:2 }}W</td>
-                    <td style="font-size: 16px" class="text-capitalize text-center">{{ consumption.price | number:2 }}€</td>
+                    <td style="font-size: 16px" class="text-capitalize text-center">-€</td>
                 </tr>
                 <tr ng-if="current_user_consumptions == 0">
                     <td colspan="3" class="text-center" translate>SCB.LIVE.NO_MEASURES</td>

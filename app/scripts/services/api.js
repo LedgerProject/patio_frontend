@@ -808,6 +808,17 @@ angular.module('comunitariaApp').service('api', function($resource, backend, $ca
 				}
 			}
 		),
+		get_scb_generated: $resource(
+			energy_base_url + '/generated/?community=:community&usercommunity=:usercommunity',
+			{},
+			{
+				get: {
+					method: 'GET',
+					isArray: true,
+					cache: false
+				}
+			}
+		),
 		get_scb_invoices: $resource(
 			energy_base_url + '/invoice/?usercommunity=:usercommunity',
 			{},
@@ -821,6 +832,17 @@ angular.module('comunitariaApp').service('api', function($resource, backend, $ca
 		),
 		get_scb_transactions: $resource(
 			energy_base_url + '/transaction/?community=:community',
+			{},
+			{
+				get: {
+					method: 'GET',
+					isArray: true,
+					cache: false
+				}
+			}
+		),
+		get_scb_stores: $resource(
+			energy_base_url + '/agreements/?community=:community',
 			{},
 			{
 				get: {
